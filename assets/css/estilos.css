@@ -8,6 +8,13 @@ color: #dcdcaa;
 color: #4ec9b0;
 color: #c586c0; */
 
+/* Para ver como se está moviendo cada componente HTML */
+/*
+* {
+  border: 1px solid red;
+}
+*/
+
 body {
   font-family: 'Courier New', Courier, monospace;
   background-color: #000;
@@ -15,7 +22,10 @@ body {
   background-position: center; /* Centra la imagen */
   background-attachment: fixed; /* Fija el fondo para que no se mueva al hacer scroll */
   height: 100vh; /* Asegura que el fondo cubra toda la pantalla */
+  width: 100vw;
   margin: 0; /* Elimina los márgenes por defecto */
+  padding: 0;
+  overflow-x: hidden;
 }
 
 body::-webkit-scrollbar {
@@ -116,17 +126,18 @@ body {
 .contPresentation{
   display: flex;
   width: 100%; /* Hace que ocupe todo el ancho del contenedor padre */
-  height: 80%;
+  height: 100%;
 }
 
 .contImagen{
   flex: 1; /* Ocupa 1 parte del ancho */
   max-width: 35%; /* Limita su ancho máximo a un tercio */
+  height: auto;
   padding: 80px 20px 20px 80px; /* arriba,derecha,abajo,izquierda */
 }
 
 .imagen{
-  height: 340px;
+  height: 60%;
   border-radius: 15px;
   background-repeat: no-repeat;
   background-size: cover;
@@ -136,6 +147,7 @@ body {
 .contPresentacion{
   flex: 2; /* Ocupa 2 partes del ancho */
   max-width: 65%; /* Limita su ancho máximo a dos tercios */
+  height: 60%;
   padding: 80px 80px 20px 40px; /* arriba,derecha,abajo,izquierda */
 }
 
@@ -168,11 +180,10 @@ body {
   grid-template-columns: repeat(3, 1fr); /* 3 columnas de igual ancho */
   gap: 30px; /* Espacio entre divs */
   padding: 20px;
-}
+} 
 
 .aptitud {
   text-align: center;
-  /* border: 2px solid #ddd; */
   padding: 30px 15px 40px 15px; /* arriba,derecha,abajo,izquierda */
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
@@ -248,7 +259,6 @@ body {
 .background-gif {
   width: 100%;
   height: auto;
-  /* border-radius: 10px; */
 }
 .text-overlay {
   position: absolute;
@@ -340,6 +350,83 @@ body {
 
 
 
+
+
+
+
+
+
+
+/* ---------------------------   Responsivo - Para las aptitudes  --------------------------- */
+/* @media (max-width: 992px) {
+  .contListaAptitudes {
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas en pantallas medianas
+  }
+} */
+
+/* @media (max-width: 576px) {
+  .contListaAptitudes {
+    grid-template-columns: 1fr; /* 1 columna en pantallas pequeñas
+  }
+} */
+
+
+
+
+/* ---------------------------   Responsivo - Para la presentación  --------------------------- */
+/* @media (max-width: 768px) {
+  .contPresentation {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  } */
+
+  /* .contImagen,
+  .contPresentacion {
+    max-width: 100%; /* Asegura que los elementos ocupen todo el ancho
+    padding: 10px;
+  }
+} */
+
+
+
+
+/* ---------------------------   Responsivo - Para la Navbar  --------------------------- */
+
+/* @media (max-width: 768px) {
+  .contNombreLinks {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  } */
+
+  /* .contLinks ul {
+    flex-direction: column; /* Cambia a columna en pantallas pequeñas 
+    padding: 0;
+  } */
+
+  /* .contLinks ul li {
+    margin-right: 0;
+    margin-bottom: 10px; /* Espacio entre enlaces 
+  }
+} */
+
+
+
+
+/* ---------------------------   Responsivo - Para proyectos  --------------------------- */
+
+/* @media (max-width: 992px) {
+  .contListaProyectos {
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas en pantallas medianas 
+  }
+} */
+
+/* @media (max-width: 576px) {
+  .contListaProyectos {
+    grid-template-columns: 1fr; /* 1 columna en pantallas pequeñas 
+  }
+} */
 
 
 
