@@ -206,11 +206,11 @@ body {
 /* ---------------------------   contenedor proyectos  --------------------------- */
 .contProyectos{
   width: 100%; /* Hace que ocupe todo el ancho del contenedor padre */
-  height: 110%;
+  height: 130%;
 }
 
 .tituloProyectos{
-  padding: 140px 20px 20px 20px; /* arriba,derecha,abajo,izquierda */
+  padding: 130px 20px 20px 20px; /* arriba,derecha,abajo,izquierda */
 }
 
 .tituloProyectos h1{
